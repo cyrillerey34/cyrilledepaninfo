@@ -1,4 +1,52 @@
 (() => {
+  const rewriteExternalSpriteUses = () => {
+    document.querySelectorAll('use[href], use[xlink\\:href]').forEach((use) => {
+      ['href', 'xlink:href'].forEach((attr) => {
+        const v = use.getAttribute(attr);
+        if (!v) return;
+        const i = v.indexOf('icons.svg#');
+        if (i === -1) return;
+        const id = v.slice(i + 'icons.svg#'.length);
+        if (!id) return;
+        use.setAttribute(attr, `#${id}`);
+      });
+    });
+  };
+
+  const injectIconsSprite = async () => {
+    if (document.querySelector('svg[data-icons-sprite]')) return;
+
+    // Works around spotty cross-browser support for external SVG sprites via <use href="file.svg#id">.
+    // We inline the sprite into the DOM, then rewrite <use> to reference #id.
+    const spriteUrl = new URL('assets/icons.svg', location.href);
+    const res = await fetch(spriteUrl, { cache: 'force-cache' });
+    if (!res.ok) return;
+    const text = await res.text();
+
+    const host = document.createElement('div');
+    host.innerHTML = text;
+    const svg = host.querySelector('svg');
+    if (!svg) return;
+
+    svg.setAttribute('data-icons-sprite', 'true');
+    svg.style.display = 'none';
+
+    const place = () => {
+      if (!document.body) {
+        requestAnimationFrame(place);
+        return;
+      }
+      if (!document.querySelector('svg[data-icons-sprite]')) {
+        document.body.prepend(svg);
+      }
+      rewriteExternalSpriteUses();
+    };
+    place();
+  };
+
+  rewriteExternalSpriteUses();
+  injectIconsSprite().catch(() => {});
+
   const nav = document.querySelector('[data-nav]');
   const btn = document.querySelector('[data-menu-btn]');
 
