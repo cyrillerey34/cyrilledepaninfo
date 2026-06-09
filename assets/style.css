@@ -27,7 +27,7 @@
 html{ color-scheme: dark; }
 body{
   margin:0;
-  font-family: var(--display);
+  font-family: var(--sans);
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(110,231,255,0.18), transparent 60%),
     radial-gradient(900px 500px at 80% 0%, rgba(167,139,250,0.18), transparent 55%),
@@ -35,7 +35,6 @@ body{
     linear-gradient(180deg, #070b14, #0b1220 25%, #070b14);
   color: var(--text);
   line-height: 1.55;
-  letter-spacing: 0.015em;
 }
 
 a{ color: inherit; }
@@ -295,8 +294,7 @@ input, textarea, select{
   color: var(--text);
   padding: 12px 12px;
   outline: none;
-  font-family: var(--display);
-  letter-spacing: 0.02em;
+  font-family: var(--sans);
 }
 textarea{ min-height: 120px; resize: vertical; }
 input:focus, textarea:focus, select:focus{
