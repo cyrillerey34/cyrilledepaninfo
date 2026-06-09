@@ -23,7 +23,7 @@ Puis ouvrez `http://localhost:5173`.
 - Numéro: vérifiez que le numéro est correct sur toutes les pages (`tel:+33614300644`).
 - Email: dans `contact.html`, l’email est `cyrille.rey34@gmail.com` (modifiable si besoin).
 - Mentions légales: complétez `mentions-legales.html` (adresse, hébergeur…).
-- URL du site: remplacez `https://example.com/` (balises `canonical`, `sitemap.xml`, `robots.txt`, JSON-LD).
+- URL du site: le site est publié sur GitHub Pages: `https://cyrillerey34.github.io/cyrilledepaninfo/`.
 - Tarifs: `tarifs.html` est réglé sur **50€ / heure** + **10€** par déplacement (+ devis sur demande).
 
 ## Fichiers
