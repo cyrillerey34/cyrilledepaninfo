@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | CyrilleDepanInfo</title>
+    <meta
+      name="description"
+      content="Contact dépannage informatique Roanne. Appelez ou décrivez votre demande via formulaire."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://example.com/contact.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Contact | CyrilleDepanInfo" />
+    <meta property="og:description" content="Contact dépannage informatique à Roanne et alentours." />
+    <meta property="og:image" content="assets/og.svg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="topbar">
+      <div class="container">
+        <div class="topbar-inner">
+          <a class="brand" href="index.html" aria-label="Accueil CyrilleDepanInfo">
+            <div class="logo" aria-hidden="true"></div>
+            <div>
+              <div class="brand-title">CyrilleDepanInfo</div>
+              <div class="brand-sub">Dépannage informatique • Roanne</div>
+            </div>
+          </a>
+          <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="nav">
+            Menu
+          </button>
+          <nav id="nav" class="nav" data-nav aria-label="Navigation">
+            <a href="services.html" data-nav-link>Services</a>
+            <a href="tarifs.html" data-nav-link>Tarifs</a>
+            <a href="zone.html" data-nav-link>Zone</a>
+            <a href="faq.html" data-nav-link>FAQ</a>
+            <a class="cta" href="contact.html" data-nav-link>Appeler / Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="page-head">
+        <div class="container">
+          <div class="breadcrumbs">Accueil / Contact</div>
+          <h1 class="page-title">Contact</h1>
+          <p class="lead">
+            Le plus simple: un appel. Sinon, laissez un message avec vos infos, je vous rappelle.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="grid">
+            <div class="col-6">
+              <div class="tile">
+                <h3>Appel direct</h3>
+                <p>
+                  <b>Téléphone</b>:
+                  <a href="tel:+33614300644">06 14 30 06 44</a>
+                </p>
+                <p class="hint">Disponible sur Roanne et alentours.</p>
+                <div class="hero-actions" style="margin-top: 12px">
+                  <a class="btn primary" href="tel:+33614300644">Appeler maintenant</a>
+                  <a class="btn" href="services.html">Voir les services</a>
+                </div>
+                <div style="height: 12px"></div>
+                <div class="note">
+                  Pour aller vite, indiquez:<br />
+                  1) le symptôme, 2) depuis quand, 3) votre ville (Roanne / alentours).
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="tile">
+                <h3>Formulaire (envoi par email)</h3>
+                <p class="hint">
+                  Ce site est sans serveur: le bouton ouvre votre application mail avec le message pré-rempli.
+                  Changez l’adresse email ci-dessous.
+                </p>
+
+                <form data-mailto="cyrille.rey34@gmail.com">
+                  <div>
+                    <label for="nom">Nom</label>
+                    <input id="nom" name="nom" autocomplete="name" required />
+                  </div>
+                  <div>
+                    <label for="telephone">Téléphone</label>
+                    <input id="telephone" name="telephone" autocomplete="tel" inputmode="tel" required />
+                  </div>
+                  <div>
+                    <label for="ville">Ville</label>
+                    <input id="ville" name="ville" autocomplete="address-level2" placeholder="Roanne / Mably / Riorges…" />
+                  </div>
+                  <div>
+                    <label for="urgence">Urgence</label>
+                    <select id="urgence" name="urgence">
+                      <option value="Normal">Normal</option>
+                      <option value="Bloquant (je ne peux plus travailler)">Bloquant</option>
+                      <option value="Urgent (PC ne démarre plus / données)">Urgent</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="demande">Votre demande</label>
+                    <textarea
+                      id="demande"
+                      name="demande"
+                      required
+                      placeholder="Ex: PC très lent depuis une semaine, beaucoup de pubs, Windows 11, besoin de récupérer mes photos…"
+                    ></textarea>
+                  </div>
+                  <div class="form-actions">
+                    <button class="btn primary" type="submit">Envoyer le message</button>
+                    <span class="hint">Réponse dès que possible.</span>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="callout">
+                <b>Données & confidentialité:</b> aucune donnée n’est stockée par le site. L’envoi passe par votre client email.
+                Voir <a href="mentions-legales.html">mentions légales</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="foot-title">CyrilleDepanInfo</div>
+            <div class="fine">Dépannage informatique • Roanne et alentours.</div>
+            <div style="height: 10px"></div>
+            <a class="btn primary" href="tel:+33614300644">Appeler</a>
+          </div>
+          <div>
+            <div class="foot-title">Pages</div>
+            <div class="fine"><a href="services.html">Services</a></div>
+            <div class="fine"><a href="tarifs.html">Tarifs</a></div>
+            <div class="fine"><a href="zone.html">Zone d’intervention</a></div>
+            <div class="fine"><a href="faq.html">FAQ</a></div>
+            <div class="fine"><a href="contact.html">Contact</a></div>
+          </div>
+          <div>
+            <div class="foot-title">Infos</div>
+            <div class="fine"><a href="mentions-legales.html">Mentions légales</a></div>
+            <div class="fine">Téléphone: <a href="tel:+33614300644">06 14 30 06 44</a></div>
+          </div>
+        </div>
+        <div style="height: 18px"></div>
+        <div class="fine">© <span id="y"></span> CyrilleDepanInfo.</div>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+    <script>
+      document.getElementById("y").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
+
