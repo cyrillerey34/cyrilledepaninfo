@@ -1,4 +1,6 @@
 (() => {
+  // Inline the SVG sprite so <use href="#id"> works reliably.
+  // Some browsers/environments are inconsistent with external sprites (file.svg#id).
   const rewriteExternalSpriteUses = () => {
     document.querySelectorAll('use[href], use[xlink\\:href]').forEach((use) => {
       ['href', 'xlink:href'].forEach((attr) => {
@@ -37,7 +39,9 @@
         return;
       }
       if (!document.querySelector('svg[data-icons-sprite]')) {
-        document.body.prepend(svg);
+        const mount = document.getElementById('icons-sprite');
+        if (mount) mount.replaceChildren(svg);
+        else document.body.prepend(svg);
       }
       rewriteExternalSpriteUses();
     };

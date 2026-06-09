@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&display=swap');
+
 /* Modern, readable, low-dependency styling */
 :root{
   --bg: #0b1220;
@@ -18,6 +20,7 @@
   --max: 1100px;
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --display: "Orbitron", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
 *{ box-sizing: border-box; }
@@ -36,6 +39,16 @@ body{
 
 a{ color: inherit; }
 img{ max-width: 100%; display:block; }
+
+.icon{
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: -0.18em;
+  color: currentColor;
+}
+.icon.sm{ width: 16px; height: 16px; }
+.with-icon{ display:inline-flex; align-items:center; gap: 10px; }
 
 .container{ width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
 
@@ -71,7 +84,12 @@ img{ max-width: 100%; display:block; }
   box-shadow: 0 10px 24px rgba(0,0,0,0.30);
   border: 1px solid rgba(255,255,255,0.18);
 }
-.brand-title{ font-weight: 700; letter-spacing: -0.02em; }
+.brand-title{
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 .brand-sub{ color: var(--muted2); font-size: 13px; margin-top: -2px; }
 
 .nav{
@@ -136,9 +154,11 @@ img{ max-width: 100%; display:block; }
 
 h1{
   margin: 14px 0 10px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.02em;
   line-height: 1.05;
   font-size: clamp(30px, 3.6vw, 52px);
+  font-family: var(--display);
+  text-transform: uppercase;
 }
 .lead{ color: var(--muted); font-size: 16px; max-width: 62ch; }
 .pillrow{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 16px; }
@@ -205,8 +225,10 @@ h1{
 .section{ padding: 26px 0; }
 .section h2{
   margin: 0 0 10px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   font-size: 26px;
+  font-family: var(--display);
+  text-transform: uppercase;
 }
 .section p{ margin: 0 0 14px; color: var(--muted); }
 
@@ -297,7 +319,13 @@ input:focus, textarea:focus, select:focus{
   padding: 30px 0 10px;
 }
 .breadcrumbs{ color: var(--muted2); font-size: 13px; }
-.page-title{ margin: 10px 0 8px; letter-spacing: -0.02em; font-size: 34px; }
+.page-title{
+  margin: 10px 0 8px;
+  letter-spacing: 0.03em;
+  font-size: 34px;
+  font-family: var(--display);
+  text-transform: uppercase;
+}
 
 .note{
   font-family: var(--mono);
