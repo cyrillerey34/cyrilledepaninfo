@@ -27,7 +27,7 @@
 html{ color-scheme: dark; }
 body{
   margin:0;
-  font-family: var(--sans);
+  font-family: var(--display);
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(110,231,255,0.18), transparent 60%),
     radial-gradient(900px 500px at 80% 0%, rgba(167,139,250,0.18), transparent 55%),
@@ -35,6 +35,7 @@ body{
     linear-gradient(180deg, #070b14, #0b1220 25%, #070b14);
   color: var(--text);
   line-height: 1.55;
+  letter-spacing: 0.015em;
 }
 
 a{ color: inherit; }
@@ -102,6 +103,7 @@ img{ max-width: 100%; display:block; }
   padding: 8px 10px;
   border-radius: 10px;
   border: 1px solid transparent;
+  letter-spacing: 0.03em;
 }
 .nav a[aria-current="page"]{
   color: var(--text);
@@ -188,6 +190,8 @@ h1{
   background: rgba(255,255,255,0.05);
   color: var(--text);
   font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 .btn.primary{
   color: #09101c;
@@ -291,6 +295,8 @@ input, textarea, select{
   color: var(--text);
   padding: 12px 12px;
   outline: none;
+  font-family: var(--display);
+  letter-spacing: 0.02em;
 }
 textarea{ min-height: 120px; resize: vertical; }
 input:focus, textarea:focus, select:focus{
